@@ -17,7 +17,9 @@ async def async_comprehension() -> List[float]:
     '''
     gen = async_generator()
 
-    return [i async for i in gen]
+    rand_nums = [i async for i in gen]
+
+    return rand_nums
 
 if __name__ == '__main__':
     print(asyncio.run(async_comprehension()))
