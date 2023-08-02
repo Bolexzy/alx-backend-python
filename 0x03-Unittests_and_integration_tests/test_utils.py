@@ -3,7 +3,7 @@
 '''
 
 import unittest
-from utils import access_nested_map
+from utils import access_nested_map, get_json
 from parameterized import parameterized
 import requests
 from unittest.mock import patch, Mock
@@ -40,7 +40,7 @@ class TestGetJson(unittest.TestCase):
     ''' Class for testing get_json function
     '''
 
-    @parametrized.expand([
+    @parameterized.expand([
           ("http://example.com", {"payload": True}),
           ("http://holberton.io", {"payload": False})
       ])
